@@ -19,7 +19,7 @@ class Sale(models.Model):
 
 
     def __str__(self):
-        return f"{self.user.first_name}  at {self.timestamp}"
+        return f"{self.user.first_name}  at {self.timestamp} ({self.amount})"
 
 
 class DailyStatement(models.Model):
@@ -31,5 +31,35 @@ class DailyStatement(models.Model):
     total_amt = models.IntegerField(blank=False, null=False, default=0)
     statements = models.ManyToManyField(Sale, blank=True, null=True)
 
+    # @total_amt.setter
+    # def set_total_amt(self, value):
+    #     self.total_amt = value
+
+    @property
+    def total_amt(self):
+        statements = self.statements.all()
+        total_amt = 0
+        for smt in statements:
+            total_amt += smt.amount
+        return total_amt
+
+    @property
+    def total_online_amt(self):
+        statements = self.statements.all()
+        total_online_amt = 0
+        for smt in statements:
+            if smt.payment_type == 'online':
+                total_online_amt += smt.amount
+        return total_online_amt
+
+    @property
+    def total_cash_amt(self):
+        statements = self.statements.all()
+        total_cash_amt = 0
+        for smt in statements:
+            if smt.payment_type == 'cash':
+                total_cash_amt += smt.amount
+        return total_cash_amt
+
     def __str__(self):
-        return f'{self.timestamp}'
+        return f'{self.opening} : {self.total_amt} : {self.timestamp}'

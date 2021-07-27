@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -75,11 +74,15 @@ WSGI_APPLICATION = 'mycafe1718.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+# postgres://USER:PASSWORD@HOST:PORT/NAME
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dbb10dm6dlo2qt',
+        'HOST' : 'ec2-54-73-58-75.eu-west-1.compute.amazonaws.com',
+        'PORT' : '5432',
+        'USER':'enyebxawmcunbr',
+        'PASSWORD': 'ee7a7728f0dc19a11569de700d85f20e9d995bdc75e096160b15fee3e4b0795b'
     }
 }
 
@@ -119,11 +122,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-STATIC_URL = "/static/"
 
 # managing media
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-
-# Heroku
-django_heroku.settings(locals())
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# managing media
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
