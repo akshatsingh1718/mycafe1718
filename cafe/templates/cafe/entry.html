@@ -1,217 +1,219 @@
-{% extends 'cafe/basic.html' %} 
-
-{% block title %} Entry {% endblock title %}
-
+{% extends 'cafe/basic.html' %} {% block title %} Entry {% endblock title %}
 {%block body %}
 <br />
 
 <div class="container mx-auto">
-        <div
-          class="py-8 flex flex-wrap md:flex-nowrap shadow-xl rounded-lg p-4">
-          <div class="md:flex-grow">
-            <div class="flex flex-1">
-              <div class="w-full md:w-1/4 px-3 md:mb-0">
-                <label
-                  class="
-                    block
-                    uppercase
-                    tracking-wide
-                    text-gray-700 text-xs
-                    font-bold
-                    mb-2 inline-flex
-                  "
-                >
-                  Sale Date
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                </label>
-                <input
-                  id="today-sale-date"
-                  type='text'
-                  class="
-                    appearance-none
-                    block
-                    w-full
-                    bg-gray-200
-                    text-gray-700
-                    border
-                    rounded
-                    py-3
-                    px-4
-                    mb-3
-                    leading-tight
-                    focus:outline-none focus:bg-white
-                  "
-                />
-              </div>
-
-              <div class="w-full md:w-1/4 px-3 md:mb-0">
-                <label
-                  class="
-                    block
-                    uppercase
-                    tracking-wide
-                    text-gray-700 text-xs
-                    font-bold
-                    mb-2 inline-flex
-                  "
-                >
-                  Cash Sale
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                </label>
-                <input
-                  readonly
-                  value = "{{dailySales.total_cash_amt}}"
-                  id="today-sale-cash-amt"
-                  class="
-                    appearance-none
-                    block
-                    w-full
-                    bg-gray-200
-                    text-gray-700
-                    border
-                    rounded
-                    py-3
-                    px-4
-                    mb-3
-                    leading-tight
-                    focus:outline-none focus:bg-white
-                  "
-                />
-              </div>
-
-              <div class="w-full md:w-1/4 px-3 md:mb-0">
-                <label
-                  class="
-                    block
-                    uppercase
-                    tracking-wide
-                    text-gray-700 text-xs
-                    font-bold
-                    mb-2 inline-flex
-                  "
-                >
-                  Online Sale
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                </label>
-                <input
-                  readonly
-                  value = "{{dailySales.total_online_amt}}"
-                  id="today-sale-online-amt"
-                  class="
-                    appearance-none
-                    block
-                    w-full
-                    bg-gray-200
-                    text-gray-700
-                    border
-                    rounded
-                    py-3
-                    px-4
-                    mb-3
-                    leading-tight
-                    focus:outline-none focus:bg-white
-                  "
-                />
-              </div>
-
-              <div class="w-full md:w-1/4 px-3 md:mb-0">
-                <label
-                  class="
-                    block
-                    uppercase
-                    tracking-wide
-                    text-gray-700 text-xs
-                    font-bold
-                    mb-2 inline-flex
-                  "
-                >
-                  Total Sale
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                </label>
-                <input
-                  readonly
-                  id="today-sale-total-amt"
-                  value = "{{dailySales.total_amt}}"
-                  class="
-                    appearance-none
-                    block
-                    w-full
-                    bg-gray-200
-                    text-gray-700
-                    border
-                    rounded
-                    py-3
-                    px-4
-                    mb-3
-                    leading-tight
-                    focus:outline-none focus:bg-white
-                  "
-                />
-              </div>
-              
-            </div>
-          </div>
+  <div class="flex flex-wrap md:flex-nowrap drop-shadow-lg filter rounded-lg">
+    <div class="md:flex-grow">
+      <div class="flex flex-1">
+        <div class="w-full md:w-1/4 px-3 md:mb-0">
+          <label
+            class="
+              block
+              uppercase
+              tracking-wide
+              text-gray-700 text-xs
+              font-bold
+              mb-2
+              inline-flex
+            "
+          >
+            Sale Date
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+          </label>
+          <input
+          readonly
+            id="today-sale-date"
+            type="text"
+            class="
+              appearance-none
+              block
+              w-full
+              bg-gray-200
+              text-gray-700
+              border
+              rounded
+              py-3
+              px-4
+              mb-3
+              leading-tight
+              focus:outline-none
+            "
+          />
         </div>
 
+        <div class="w-full md:w-1/4 px-3 md:mb-0">
+          <label
+            class="
+              block
+              uppercase
+              tracking-wide
+              text-gray-700 text-xs
+              font-bold
+              mb-2
+              inline-flex
+            "
+          >
+            Cash Sale
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+          </label>
+          <input
+            readonly
+            value="{{dailySales.total_cash_amt}}"
+            id="today-sale-cash-amt"
+            class="
+              appearance-none
+              block
+              w-full
+              bg-gray-200
+              text-gray-700
+              border
+              rounded
+              py-3
+              px-4
+              mb-3
+              leading-tight
+                            focus:outline-none
+            "
+          />
+        </div>
+
+        <div class="w-full md:w-1/4 px-3 md:mb-0">
+          <label
+            class="
+              block
+              uppercase
+              tracking-wide
+              text-gray-700 text-xs
+              font-bold
+              mb-2
+              inline-flex
+            "
+          >
+            Online Sale
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+          </label>
+          <input
+            readonly
+            value="{{dailySales.total_online_amt}}"
+            id="today-sale-online-amt"
+            class="
+              appearance-none
+              block
+              w-full
+              bg-gray-200
+              text-gray-700
+              border
+              rounded
+              py-3
+              px-4
+              mb-3
+              leading-tight
+                            focus:outline-none
+            "
+          />
+        </div>
+
+        <div class="w-full md:w-1/4 px-3 md:mb-0">
+          <label
+            class="
+              block
+              uppercase
+              tracking-wide
+              text-gray-700 text-xs
+              font-bold
+              mb-2
+              inline-flex
+            "
+          >
+            Total Sale
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+          </label>
+          <input
+            readonly
+            id="today-sale-total-amt"
+            value="{{dailySales.total_amt}}"
+            class="
+              appearance-none
+              block
+              w-full
+              bg-gray-200
+              text-gray-700
+              border
+              rounded
+              py-3
+              px-4
+              mb-3
+              leading-tight
+              focus:outline-none
+            "
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="shadow-lg"/>
+
   <section class="text-gray-600 body-font overflow-hidden">
-    <div class="divide-y-2 divide-gray-100 relative my-10 p-5 mx-5">
+    <div class="divide-y-2 divide-gray-100 relative  p-5 mx-5">
       <!--Starting of new row-->
       <form class="" action="/add-sale/" method="POST" id="add-sale-form">
         {% csrf_token %}
         <div
-          class="py-8 flex flex-wrap md:flex-nowrap shadow-xl rounded-lg p-4">
+          class="py-8 flex flex-wrap md:flex-nowrap shadow-xl rounded-lg p-4"
+        >
           <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
             <span class="font-semibold text-xl title-font text-gray-700"
               >Sale by</span
@@ -299,32 +301,34 @@
                 >
                   Payment Type
                 </label>
-                <div class="mt-1 inline-flex items-center">
-                  <input
-                    checked
-                    type="radio"
-                    class="form-radio h-6 w-6"
-                    name="sale-pmt-type"
-                    value="cash"
-                    id="sale-pmt-type"
-                  />
-                  <span class="ml-3 text-lg inline-flex">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                    Cash
-                  </span>
+                <div class="mt-1">
+                  <label class="inline-flex items-center">
+                    <input
+                      checked
+                      type="radio"
+                      class="form-radio h-6 w-6"
+                      name="sale-pmt-type"
+                      id="sale-pmt-type"
+                      value="cash"
+                    />
+                    <span class="ml-3 text-lg inline-flex">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+                        />
+                      </svg>
+                      Cash
+                    </span>
+                  </label>
                 </div>
                 <div class="mt-1">
                   <label class="inline-flex items-center">
@@ -426,17 +430,17 @@
               {% endcomment %}
               <div class="w-full md:w-1/4">
                 <button
-                id = 'submit-sale-btn'
+                  id="submit-sale-btn"
                   type="submit"
                   class="
                     mt-2
                     text-white
                     w-full
-                    bg-purple-600
-                    hover:bg-purple-700
+                    bg-green-600
+                    hover:bg-green-700
                     focus:outline-none
                     focus:ring-2
-                    focus:ring-purple-600
+                    focus:ring-green-600
                     focus:ring-opacity-50
                     p-5
                   "
@@ -451,7 +455,8 @@
     </div>
 
     <div id="sales" class="my-5">
-      {% for sale in sales %}
+     {% for sale in sales %}
+     <h1>| {{ sale.pk }}  |</h>
       <div
         class="divide-y-2 divide-gray-100 relative p-3 mx-5"
         id="sale-id-{{ sale.pk }}"
@@ -463,7 +468,7 @@
             <span class="font-semibold text-xl title-font text-gray-700"
               >Sale by</span
             >
-            <span class="mt-1 text-gray-500 text-2xl">
+            <span class="mt-1 text-gray-500 text-3xl">
               <div class="mt-1">{{sale.user.username }}</div>
             </span>
           </div>
@@ -485,7 +490,7 @@
                 <input
                   readonly
                   value="{{sale.amount}}"
-                  id = "sale-total-amt-{{sale.pk}}"
+                  id="sale-total-amt-{{sale.pk}}"
                   class="
                     appearance-none
                     block
@@ -519,7 +524,7 @@
                 <div class="mt-1 inline-flex items-center">
                   <input
                     readonly
-                    id = "sale-pmt-type-{{sale.pk}}"
+                    id="sale-pmt-type-{{sale.pk}}"
                     value="{{sale.payment_type}}"
                     class="
                       appearance-none
@@ -554,7 +559,7 @@
                 </label>
                 <input
                   readonly
-                  id = "sale-desc-{{sale.pk}}"
+                  id="sale-desc-{{sale.pk}}"
                   value="{{ sale.description }}"
                   class="
                     appearance-none
@@ -587,7 +592,7 @@
                 </label>
                 <input
                   readonly
-                  id = "sale-time-{{sale.pk}}"
+                  id="sale-time-{{sale.pk}}"
                   value="{{sale.timestamp}}"
                   class="
                     appearance-none
@@ -627,6 +632,7 @@
                       text-white
                       w-full
                       bg-red-600
+                      text-xl
                       hover:bg-red-700
                       focus:outline-none
                       focus:ring-2
@@ -635,7 +641,12 @@
                       p-5
                     "
                   >
+                  <span class="inline-flex">
                     Delete
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                  </span>
                   </button>
                 </form>
               </div>
@@ -647,14 +658,21 @@
     </div>
   </section>
 </div>
-{% endblock body %} 
-
-
-{% block js %}
+{% endblock body %} {% block js %}
 <script>
   var today = new Date();
-  var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-  var date = `${today.getDate()}/${today.getMonth()}/${today.getFullYear()} : ${days[today.getDay()]}`;
+  var days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  var date = `${today.getDate()}/${today.getMonth()}/${today.getFullYear()} : ${
+    days[today.getDay()]
+  }`;
   $("#today-sale-date").val(date);
 </script>
 
@@ -730,21 +748,20 @@
 
 <script>
   function create_sale(sale) {
-    var curr_amt =  parseInt($(`#today-sale-${sale.payment_type}-amt`).val());
+    var curr_amt = parseInt($(`#today-sale-${sale.payment_type}-amt`).val());
     var curr_total_amt = parseInt($(`#today-sale-total-amt`).val());
     var add_amt = parseInt(sale.amount);
     $(`#today-sale-${sale.payment_type}-amt`).val(curr_amt + add_amt);
     $(`#today-sale-total-amt`).val(curr_total_amt + add_amt);
 
-
     var saleDiv = `
-        <div class="divide-y-2 divide-gray-100 relative my-10 p-5 mx-5" id="sale-id-{{sale.pk}}">
+        <div class="divide-y-2 divide-gray-100 relative my-10 p-5 mx-5" id="sale-id-${sale.pk}">
             <div class="py-8 flex flex-wrap md:flex-nowrap mt-5 shadow-lg p-4" >
             <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
               <span class="font-semibold text-xl title-font text-gray-700"
                 >Sale by</span
               >
-              <span class="mt-1 text-gray-500 text-sm">
+              <span class="mt-1 text-gray-500 text-3xl">
                 <div class="mt-1">
                   ${sale.user}
                 </div>
@@ -887,7 +904,9 @@
                 </div>
                 <div class="w-full md:w-1/4">
                 <form action="/delete-sale/" method="POST" class="delete-sale-form" >
-                  <input type='hidden' value="${sale.pk}" id="sale-id-${sale.pk}" name="sale-id"/>
+                  <input type='hidden' value="${sale.pk}" id="sale-id-${
+      sale.pk
+    }" name="sale-id"/>
                   <button
                     id = 'del-sale-btn-${sale.pk}'
                     value = "${sale.pk}"

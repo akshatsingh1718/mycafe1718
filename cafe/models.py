@@ -27,7 +27,7 @@ class DailyStatement(models.Model):
     # it is primary key of product table and Django makes it
     # by its own
     opening = models.IntegerField(_("Opening Balance"), default=0)
-    timestamp = models.DateField(_("Date") ,auto_now_add=True)
+    timestamp = models.DateField(_("Date"), unique= True)
     total_amt = models.IntegerField(blank=False, null=False, default=0)
     statements = models.ManyToManyField(Sale, blank=True, null=True)
 

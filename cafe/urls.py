@@ -11,4 +11,4 @@ urlpatterns = [
     path("add-sale/", views.add_sale, name="AddSale"),
     path("del-sale/", views.del_sale, name="DeleteSale"),
     path("search-sale/", views.search_sale, name="SearchSale"),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

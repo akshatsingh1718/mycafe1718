@@ -15,8 +15,8 @@ def index(request):
 # Entry
 def entry(request):
     sales = Sale.objects.order_by('-pk')
-    daily_sale, iscreated  = DailyStatement.objects.get_or_create(timestamp__day= datetime.now().day)
-    return render(request, 'cafe/entry.html', {'sales': sales, 'dailySales': daily_sale})
+    daily_stmt, is_created = DailyStatement.objects.get_or_create(timestamp = date.today())
+    return render(request, 'cafe/entry.html', {'sales': sales, 'dailySales': daily_stmt})
 
 
 def del_sale(request):
@@ -79,11 +79,12 @@ def add_sale(request):
 def search_sale(request):
     if request.method == 'POST':
         search_date = request.POST.get('search-sale-date')
+        s_date = date.fromisoformat(search_date)
         print(f'{search_date} : {date.today()}')
         print(search_date == date.today())
         print(search_date is date.today())
-
-        daily_stmt, is_created = DailyStatement.objects.get_or_create(timestamp = search_date)
+        print(s_date)
+        daily_stmt, is_created = DailyStatement.objects.get_or_create(timestamp = s_date)
     else:
         daily_stmt, is_created = DailyStatement.objects.get_or_create(timestamp = date.today())
     return render(request, 'cafe/search-sale.html', {'dailySales': daily_stmt})
