@@ -94,6 +94,7 @@
             <input
               readonly
               value="{{dailySales.total_cash_amt}}"
+               id="today-sale-cash-amt"
               class="
                 appearance-none
                 block
@@ -143,6 +144,7 @@
             <input
               readonly
               value="{{dailySales.total_online_amt}}"
+              id="today-sale-online-amt"
               class="
                 appearance-none
                 block
@@ -191,6 +193,7 @@
             <input
               readonly
               value="{{dailySales.total_amt}}"
+              id="today-sale-total-amt"
               class="
                 appearance-none
                 block
@@ -428,7 +431,7 @@
     {% else %}
     <section class="hero container max-w-screen-lg mx-auto pb-10">
         <h1 class="text-4xl bold text-center text-red-700">No Results Found !</h1>
-        <img class="mx-auto" src="{% static 'cafe/no_results.jpg' %}" alt="screenshot">
+        <img class="mx-auto" src="{% static 'cafe/no-result-found.jpg' %}" alt="screenshot">
     </section>
     {% endif %}
     </div>

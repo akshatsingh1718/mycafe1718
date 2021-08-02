@@ -7,8 +7,7 @@
     <div class="md:flex-grow">
       <div class="flex flex-1">
         <div class="w-full md:w-1/4 px-3 md:mb-0">
-          <label
-            class="
+          <label class="
               block
               uppercase
               tracking-wide
@@ -16,29 +15,15 @@
               font-bold
               mb-2
               inline-flex
-            "
-          >
+            ">
             Sale Date
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
           </label>
-          <input
-          readonly
-            id="today-sale-date"
-            type="text"
-            class="
+          <input readonly id="today-sale-date" type="text" class="
               appearance-none
               block
               w-full
@@ -51,13 +36,11 @@
               mb-3
               leading-tight
               focus:outline-none
-            "
-          />
+            " />
         </div>
 
         <div class="w-full md:w-1/4 px-3 md:mb-0">
-          <label
-            class="
+          <label class="
               block
               uppercase
               tracking-wide
@@ -65,127 +48,15 @@
               font-bold
               mb-2
               inline-flex
-            "
-          >
+            ">
             Cash Sale
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
           </label>
-          <input
-            readonly
-            value="{{dailySales.total_cash_amt}}"
-            id="today-sale-cash-amt"
-            class="
-              appearance-none
-              block
-              w-full
-              bg-gray-200
-              text-gray-700
-              border
-              rounded
-              py-3
-              px-4
-              mb-3
-              leading-tight
-                            focus:outline-none
-            "
-          />
-        </div>
-
-        <div class="w-full md:w-1/4 px-3 md:mb-0">
-          <label
-            class="
-              block
-              uppercase
-              tracking-wide
-              text-gray-700 text-xs
-              font-bold
-              mb-2
-              inline-flex
-            "
-          >
-            Online Sale
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg>
-          </label>
-          <input
-            readonly
-            value="{{dailySales.total_online_amt}}"
-            id="today-sale-online-amt"
-            class="
-              appearance-none
-              block
-              w-full
-              bg-gray-200
-              text-gray-700
-              border
-              rounded
-              py-3
-              px-4
-              mb-3
-              leading-tight
-                            focus:outline-none
-            "
-          />
-        </div>
-
-        <div class="w-full md:w-1/4 px-3 md:mb-0">
-          <label
-            class="
-              block
-              uppercase
-              tracking-wide
-              text-gray-700 text-xs
-              font-bold
-              mb-2
-              inline-flex
-            "
-          >
-            Total Sale
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg>
-          </label>
-          <input
-            readonly
-            id="today-sale-total-amt"
-            value="{{dailySales.total_amt}}"
-            class="
+          <input readonly value="{{dailySales.total_cash_amt}}" id="today-sale-cash-amt" class="
               appearance-none
               block
               w-full
@@ -198,75 +69,114 @@
               mb-3
               leading-tight
               focus:outline-none
-            "
-          />
+            " />
+        </div>
+
+        <div class="w-full md:w-1/4 px-3 md:mb-0">
+          <label class="
+              block
+              uppercase
+              tracking-wide
+              text-gray-700 text-xs
+              font-bold
+              mb-2
+              inline-flex
+            ">
+            Online Sale
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </label>
+          <input readonly value="{{dailySales.total_online_amt}}" id="today-sale-online-amt" class="
+              appearance-none
+              block
+              w-full
+              bg-gray-200
+              text-gray-700
+              border
+              rounded
+              py-3
+              px-4
+              mb-3
+              leading-tight
+              focus:outline-none
+            " />
+        </div>
+
+        <div class="w-full md:w-1/4 px-3 md:mb-0">
+          <label class="
+              block
+              uppercase
+              tracking-wide
+              text-gray-700 text-xs
+              font-bold
+              mb-2
+              inline-flex
+            ">
+            Total Sale
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </label>
+          <input readonly id="today-sale-total-amt" value="{{dailySales.total_amt}}" class="
+              appearance-none
+              block
+              w-full
+              bg-gray-200
+              text-gray-700
+              border
+              rounded
+              py-3
+              px-4
+              mb-3
+              leading-tight
+              focus:outline-none
+            " />
         </div>
       </div>
     </div>
   </div>
-  <hr class="shadow-lg"/>
+  <hr class="shadow-lg" />
 
   <section class="text-gray-600 body-font overflow-hidden">
-    <div class="divide-y-2 divide-gray-100 relative  p-5 mx-5">
+    <div class="divide-y-2 divide-gray-100 relative p-5 mx-5">
       <!--Starting of new row-->
       <form class="" action="/add-sale/" method="POST" id="add-sale-form">
         {% csrf_token %}
-        <div
-          class="py-8 flex flex-wrap md:flex-nowrap shadow-xl rounded-lg p-4"
-        >
-          <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-            <span class="font-semibold text-xl title-font text-gray-700"
-              >Sale by</span
-            >
+        <div class="shadow-xl  inline-flex flex-wrap p-4 m-4 md:flex">
+          <div class="px-3 w-1/2 overflow-auto flex-none  md:flex-1">
+            <span class="font-semibold text-xl title-font text-gray-700">Sale by</span>
             <span class="mt-1 text-gray-500 text-sm">
               <div class="mt-1">
                 <label class="inline-flex items-center">
-                  <input
-                    checked
-                    type="radio"
-                    class="form-radio h-6 w-6"
-                    name="sale-by"
-                    id="sale-by"
-                    value="arjun"
-                  />
+                  <input checked type="radio" class="form-radio h-6 w-6" name="sale-by" id="sale-by" value="arjun" />
                   <span class="ml-3 text-lg inline-flex"> Arjun </span>
                 </label>
               </div>
               <div class="mt-1">
                 <label class="inline-flex items-center">
-                  <input
-                    type="radio"
-                    class="form-radio h-6 w-6"
-                    name="sale-by"
-                    id="sale-by"
-                    value="jitender"
-                  />
+                  <input type="radio" class="form-radio h-6 w-6" name="sale-by" id="sale-by" value="jitender" />
                   <span class="ml-3 text-lg inline-flex"> Jitender </span>
                 </label>
               </div>
             </span>
           </div>
-          <div class="md:flex-grow">
-            <div class="flex flex-1">
-              <div class="w-full md:w-1/4 px-3 md:mb-0">
-                <label
-                  class="
+          <div class="px-3 w-1/2 overflow-auto flex-none  md:flex-1">
+            <label class="
                     block
                     uppercase
                     tracking-wide
                     text-gray-700 text-xs
                     font-bold
                     mb-2
-                  "
-                  for="sale-amt"
-                >
-                  Amount
-                </label>
-                <input
-                  name="sale-amt"
-                  id="sale-amt"
-                  requied
-                  class="
+                  " for="sale-amt">
+              Amount
+            </label>
+            <input name="sale-amt" id="sale-amt" requied class="
                     appearance-none
                     block
                     w-full
@@ -279,379 +189,253 @@
                     mb-3
                     leading-tight
                     focus:outline-none focus:bg-white
-                  "
-                  type="number"
-                  placeholder="eg. 100"
-                />
-                <p class="text-red-500 text-xs italic">
-                  Please fill out this field.
-                </p>
-              </div>
-              <div class="w-full md:w-1/4 px-3">
-                <label
-                  class="
+                  " type="number" placeholder="eg. 100" />
+            <p class="text-red-500 text-xs italic">
+              Please fill out this field.
+            </p>
+          </div>
+          <div class="px-3 w-1/2 overflow-auto flex-none  md:flex-1">
+            <label class="
                     block
                     uppercase
                     tracking-wide
                     text-gray-700 text-xs
                     font-bold
                     mb-2
-                  "
-                  for="pmt-type"
-                >
-                  Payment Type
-                </label>
-                <div class="mt-1">
-                  <label class="inline-flex items-center">
-                    <input
-                      checked
-                      type="radio"
-                      class="form-radio h-6 w-6"
-                      name="sale-pmt-type"
-                      id="sale-pmt-type"
-                      value="cash"
-                    />
-                    <span class="ml-3 text-lg inline-flex">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                      </svg>
-                      Cash
-                    </span>
-                  </label>
-                </div>
-                <div class="mt-1">
-                  <label class="inline-flex items-center">
-                    <input
-                      type="radio"
-                      class="form-radio h-6 w-6"
-                      name="sale-pmt-type"
-                      id="sale-pmt-type"
-                      value="online"
-                    />
-                    <span class="ml-3 text-lg inline-flex">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                        />
-                      </svg>
-                      Online
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <div class="w-full md:w-1/4 px-3">
-                <label
-                  class="
-                    block
-                    uppercase
-                    tracking-wide
-                    text-gray-700 text-xs
-                    font-bold
-                    mb-2
-                  "
-                  for="sale-desc"
-                >
-                  Description
-                </label>
-                <input
-                  name="sale-desc"
-                  class="
-                    appearance-none
-                    block
-                    w-full
-                    bg-gray-200
-                    text-gray-700
-                    border border-gray-200
-                    rounded
-                    py-3
-                    px-4
-                    leading-tight
-                    focus:outline-none focus:bg-white focus:border-gray-500
-                  "
-                  id="sale-desc"
-                  type="text"
-                  placeholder="eg. Print out"
-                />
-              </div>
-              {% comment %}
-              <div class="w-full md:w-1/4 px-3">
-                <label
-                  class="
-                    block
-                    uppercase
-                    tracking-wide
-                    text-gray-700 text-xs
-                    font-bold
-                    mb-2
-                  "
-                  for="sale-time"
-                >
-                  Time
-                </label>
-                <input
-                  name="sale-time"
-                  class="
-                    appearance-none
-                    block
-                    w-full
-                    bg-gray-200
-                    text-gray-700
-                    border border-gray-200
-                    rounded
-                    py-3
-                    px-4
-                    leading-tight
-                    focus:outline-none focus:bg-white focus:border-gray-500
-                  "
-                  id="sale-time"
-                  type="time"
-                />
-              </div>
-              {% endcomment %}
-              <div class="w-full md:w-1/4">
-                <button
-                  id="submit-sale-btn"
-                  type="submit"
-                  class="
-                    mt-2
-                    text-white
-                    w-full
-                    bg-green-600
-                    hover:bg-green-700
-                    focus:outline-none
-                    focus:ring-2
-                    focus:ring-green-600
-                    focus:ring-opacity-50
-                    p-5
-                  "
-                >
-                  Add Sale
-                </button>
-              </div>
+                  " for="pmt-type">
+              Payment Type
+            </label>
+            <div class="mt-1">
+              <label class="inline-flex items-center">
+                <input checked type="radio" class="form-radio h-6 w-6" name="sale-pmt-type" id="sale-pmt-type"
+                  value="cash" />
+                <span class="ml-3 text-lg inline-flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  Cash
+                </span>
+              </label>
+            </div>
+            <div class="mt-1">
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio h-6 w-6" name="sale-pmt-type" id="sale-pmt-type" value="online" />
+                <span class="ml-3 text-lg inline-flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                  Online
+                </span>
+              </label>
             </div>
           </div>
+          <div class="px-3 w-1/2 overflow-auto flex-none  md:flex-1">
+            <label class="
+                    block
+                    uppercase
+                    tracking-wide
+                    text-gray-700 text-xs
+                    font-bold
+                    mb-2
+                  " for="sale-desc">
+              Description
+            </label>
+            <input name="sale-desc" class="
+                    appearance-none
+                    block
+                    w-full
+                    bg-gray-200
+                    text-gray-700
+                    border border-gray-200
+                    rounded
+                    py-3
+                    px-4
+                    leading-tight
+                    focus:outline-none focus:bg-white focus:border-gray-500
+                  " id="sale-desc" type="text" placeholder="eg. Print out" />
+          </div>
+          <button id="submit-sale-btn" type="submit" class="
+            w-full
+            lex-none  
+            md:flex-1
+            text-center
+            del-sale-btn
+            mt-2
+            text-white
+            bg-green-600
+            text-2xl
+            hover:bg-green-700
+            focus:outline-none
+            focus:ring-2
+            focus:ring-green-600
+            focus:ring-opacity-50
+            p-5">
+            Add Sale
+          </button>
         </div>
       </form>
     </div>
 
     <div id="sales" class="my-5">
-     {% for sale in sales %}
-     <h1>| {{ sale.pk }}  |</h>
-      <div
-        class="divide-y-2 divide-gray-100 relative p-3 mx-5"
-        id="sale-id-{{ sale.pk }}"
-      >
-        <div
-          class="py-8 flex flex-wrap md:flex-nowrap shadow-lg p-4 rounded-lg"
-        >
-          <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-            <span class="font-semibold text-xl title-font text-gray-700"
-              >Sale by</span
-            >
-            <span class="mt-1 text-gray-500 text-3xl">
-              <div class="mt-1">{{sale.user.username }}</div>
-            </span>
+      {% for sale in sales %}
+      <div class="divide-y-2 divide-gray-100 relative p-3 mx-5" id="sale-id-{{ sale.pk }}">
+        <div class="shadow-xl  inline-flex flex-wrap p-4 m-4 md:flex">
+          <div class="px-3 w-1/2 overflow-auto flex-none  md:flex-1">
+            <label class="
+                  block
+                  uppercase
+                  tracking-wide
+                  text-gray-700 text-xs
+                  font-bold
+                  mb-2
+                ">
+              Sale By
+            </label>
+            <input readonly value="{{sale.user.username }}" id="sale-by" class="
+                  appearance-none
+                  block
+                  w-full
+                  bg-gray-200
+                  text-gray-700
+                  border
+                  rounded
+                  py-3
+                  px-4
+                  mb-3
+                  leading-tight
+                  focus:outline-none focus:bg-white
+                " type="text" />
           </div>
-          <div class="md:flex-grow">
-            <div class="flex flex-1">
-              <div class="w-full md:w-1/4 px-3 md:mb-0">
-                <label
-                  class="
-                    block
-                    uppercase
-                    tracking-wide
-                    text-gray-700 text-xs
-                    font-bold
-                    mb-2
-                  "
-                >
-                  Amount
-                </label>
-                <input
-                  readonly
-                  value="{{sale.amount}}"
-                  id="sale-total-amt-{{sale.pk}}"
-                  class="
-                    appearance-none
-                    block
-                    w-full
-                    bg-gray-200
-                    text-gray-700
-                    border
-                    rounded
-                    py-3
-                    px-4
-                    mb-3
-                    leading-tight
-                    focus:outline-none focus:bg-white
-                  "
-                  type="number"
-                />
-              </div>
-              <div class="w-full md:w-1/4 px-3">
-                <label
-                  class="
-                    block
-                    uppercase
-                    tracking-wide
-                    text-gray-700 text-xs
-                    font-bold
-                    mb-2
-                  "
-                >
-                  Payment Type
-                </label>
-                <div class="mt-1 inline-flex items-center">
-                  <input
-                    readonly
-                    id="sale-pmt-type-{{sale.pk}}"
-                    value="{{sale.payment_type}}"
-                    class="
-                      appearance-none
-                      block
-                      w-full
-                      bg-gray-200
-                      text-gray-700
-                      border
-                      rounded
-                      py-3
-                      px-4
-                      mb-3
-                      leading-tight
-                      focus:outline-none focus:bg-white
-                    "
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div class="w-full md:w-1/4 px-3">
-                <label
-                  class="
-                    block
-                    uppercase
-                    tracking-wide
-                    text-gray-700 text-xs
-                    font-bold
-                    mb-2
-                  "
-                >
-                  Description
-                </label>
-                <input
-                  readonly
-                  id="sale-desc-{{sale.pk}}"
-                  value="{{ sale.description }}"
-                  class="
-                    appearance-none
-                    block
-                    w-full
-                    bg-gray-200
-                    text-gray-700
-                    border border-gray-200
-                    rounded
-                    py-3
-                    px-4
-                    leading-tight
-                    focus:outline-none focus:bg-white focus:border-gray-500
-                  "
-                  type="text"
-                />
-              </div>
-              <div class="w-full md:w-1/4 px-3">
-                <label
-                  class="
-                    block
-                    uppercase
-                    tracking-wide
-                    text-gray-700 text-xs
-                    font-bold
-                    mb-2
-                  "
-                >
-                  Time
-                </label>
-                <input
-                  readonly
-                  id="sale-time-{{sale.pk}}"
-                  value="{{sale.timestamp}}"
-                  class="
-                    appearance-none
-                    block
-                    w-full
-                    bg-gray-200
-                    text-gray-700
-                    border border-gray-200
-                    rounded
-                    py-3
-                    px-4
-                    leading-tight
-                    focus:outline-none focus:bg-white focus:border-gray-500
-                  "
-                  type="text"
-                />
-              </div>
-              <div class="w-full md:w-1/4">
-                <form
-                  action="/delete-sale/"
-                  method="POST"
-                  class="delete-sale-form"
-                >
-                  <input
-                    type="hidden"
-                    value="{{sale.pk}}"
-                    id="sale-id-{{sale.pk}}"
-                    name="sale-id"
-                  />
-                  <button
-                    id="del-sale-btn-{{sale.pk}}"
-                    value="{{sale.pk}}"
-                    type="button"
-                    class="
-                      del-sale-btn
-                      mt-2
-                      text-white
-                      w-full
-                      bg-red-600
-                      text-xl
-                      hover:bg-red-700
-                      focus:outline-none
-                      focus:ring-2
-                      focus:ring-red-600
-                      focus:ring-opacity-50
-                      p-5
-                    "
-                  >
-                  <span class="inline-flex">
-                    Delete
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                    </svg>
-                  </span>
-                  </button>
-                </form>
-              </div>
-            </div>
+          <div class="px-3 w-1/2 overflow-auto flex-none  md:flex-1">
+            <label class="
+                  block
+                  uppercase
+                  tracking-wide
+                  text-gray-700 text-xs
+                  font-bold
+                  mb-2
+                ">
+              Amount
+            </label>
+            <input readonly value="{{sale.amount}}" id="sale-total-amt-{{sale.pk}}" class="
+                  appearance-none
+                  block
+                  w-full
+                  bg-gray-200
+                  text-gray-700
+                  border
+                  rounded
+                  py-3
+                  px-4
+                  mb-3
+                  leading-tight
+                  focus:outline-none focus:bg-white
+                " type="number" />
           </div>
+          <div class="px-3 w-1/2 overflow-auto flex-none  md:flex-1">
+            <label class="
+                  block
+                  overflow-auto
+                  uppercase
+                  text-gray-700 text-xs
+                  font-bold
+                  mb-2
+                ">
+              Payment Type
+            </label>
+            <input readonly id="sale-pmt-type-{{sale.pk}}" value="{{sale.payment_type}}" class="
+                  appearance-none
+                  block
+                  w-full
+                  bg-gray-200
+                  text-gray-700
+                  border
+                  rounded
+                  py-3
+                  px-4
+                  mb-3
+                  leading-tight
+                  focus:outline-none focus:bg-white
+                  " type="text" />
+          </div>
+          <div class="px-3 w-1/2 overflow-auto flex-none  md:flex-1">
+            <label class="
+                  block
+                  uppercase
+                  tracking-wide
+                  text-gray-700 text-xs
+                  font-bold
+                  mb-2
+                ">
+              Description
+            </label>
+            <input readonly id="sale-desc-{{sale.pk}}" value="{{ sale.description }}" class="
+                  appearance-none
+                  block
+                  w-full
+                  bg-gray-200
+                  text-gray-700
+                  border border-gray-200
+                  rounded
+                  py-3
+                  px-4
+                  leading-tight
+                  focus:outline-none focus:bg-white focus:border-gray-500
+                " type="text" />
+          </div>
+          <div class="px-3 w-1/2 overflow-auto flex-none  md:flex-1">
+            <label class="
+                  block
+                  uppercase
+                  tracking-wide
+                  text-gray-700 text-xs
+                  font-bold
+                  mb-2
+                ">
+              Time
+            </label>
+            <input readonly id="sale-time-{{sale.pk}}" value="{{sale.timestamp}}" class="
+                  appearance-none
+                  block
+                  w-full
+                  bg-gray-200
+                  text-gray-700
+                  border border-gray-200
+                  rounded
+                  py-3
+                  px-4
+                  leading-tight
+                  focus:outline-none focus:bg-white focus:border-gray-500
+                " type="text" />
+          </div>
+          <button class="
+                w-full
+                lex-none  
+                md:flex-1
+                text-center
+                del-sale-btn
+                mt-2
+                text-white
+                bg-red-600
+                text-2xl
+                hover:bg-red-700
+                focus:outline-none
+                focus:ring-2
+                focus:ring-red-600
+                focus:ring-opacity-50
+                p-5
+              id=" del-sale-btn-{{sale.pk}}" value="{{sale.pk}}" type="button" ">
+              <svg
+                xmlns=" http://www.w3.org/2000/svg" class="w-6 mx-auto" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+          </button>
         </div>
       </div>
       {% endfor %}
@@ -670,78 +454,74 @@
     "Friday",
     "Saturday",
   ];
-  var date = `${today.getDate()}/${today.getMonth()}/${today.getFullYear()} : ${
-    days[today.getDay()]
-  }`;
+  var date = `${today.getDate()}/${today.getMonth()}/${today.getFullYear()} : ${days[today.getDay()]
+    }`;
   $("#today-sale-date").val(date);
 </script>
 
 <script>
-  $('body').on('click','.del-sale-btn', function(){
-      {% comment %} alert('delete clicked for id: ' + $(this).attr('id')); {% endcomment %}
-      var btnId = $(this).val();
-      $( `#del-sale-btn-${btnId}`).prop( "disabled", true ).addClass('animate-pulse cursor-wait');
+  $('body').on('click', '.del-sale-btn', function () {
+    var btnId = $(this).val();
+    $(`#del-sale-btn-${btnId}`).prop("disabled", true).addClass('animate-pulse cursor-wait');
 
-      var data = {
-        'sale-id' : btnId,
-        'csrfmiddlewaretoken' :  $("[name='csrfmiddlewaretoken']").val()
+    var data = {
+      'sale-id': btnId,
+      'csrfmiddlewaretoken': $("[name='csrfmiddlewaretoken']").val()
+    }
+    $.ajax({
+      type: "POST",
+      url: '/del-sale/',
+      data: data, // serializes the form's elements.
+      success: function (data) {
+        alert(data.msg); // show response from the php script.
+        if (data.status) {
+          $(`#sale-id-${btnId}`).remove();
+
+          var curr_amt = parseInt($(`#today-sale-${data.payment_type}-amt`).val());
+          var curr_total_amt = parseInt($(`#today-sale-total-amt`).val());
+          var add_amt = parseInt(data.amount);
+          console.log(`curr_amt : ${curr_amt}`);
+          console.log(`curr_total_amt : ${curr_total_amt}`);
+          console.log(`add_amt : ${add_amt}`);
+
+          $(`#today-sale-${data.payment_type}-amt`).val(curr_amt - add_amt);
+          $(`#today-sale-total-amt`).val(curr_total_amt - add_amt);
+        }
+        $(`#del-sale-btn-${btnId}`).prop("disabled", false).removeClass('animate-pulse cursor-wait');
       }
-      $.ajax({
-               type: "POST",
-               url: '/del-sale/',
-               data: data, // serializes the form's elements.
-               success: function(data)
-               {
-                   alert(data.msg); // show response from the php script.
-                   if(data.status){
-                      $(`#sale-id-${btnId}`).remove();
-
-                      var curr_amt =  parseInt($(`#today-sale-${data.payment_type}-amt`).val());
-                      var curr_total_amt = parseInt($(`#today-sale-total-amt`).val());
-                      var add_amt = parseInt(data.amount);
-                      console.log(`curr_amt : ${curr_amt}`);
-                      console.log(`curr_total_amt : ${curr_total_amt}`);
-                      console.log(`add_amt : ${add_amt}`);
-
-                      $(`#today-sale-${data.payment_type}-amt`).val(curr_amt - add_amt);
-                      $(`#today-sale-total-amt`).val(curr_total_amt - add_amt);
-                    }
-                  $( `#del-sale-btn-${btnId}`).prop( "disabled", false ).removeClass('animate-pulse cursor-wait');
-               }
-             });
+    });
   });
 </script>
 
 <script>
-  $('#add-sale-form').on('submit', (e)=>{
-   e.preventDefault(); // avoid to execute the actual submit of the form.
-    $( "#submit-sale-btn" ).prop( "disabled", true ).addClass('animate-pulse cursor-wait');
+  $('#add-sale-form').on('submit', (e) => {
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+    $("#submit-sale-btn").prop("disabled", true).addClass('animate-pulse cursor-wait');
 
-      var form = $(this);
-      var url = form.attr('action');
-      var data = {
-          'user' : $('input[name="sale-by"]:checked').val(),
-          'amount' : $("#sale-amt").val(),
-          'payment_type' : $('input[name="sale-pmt-type"]:checked').val(),
-          'description' : $("#sale-desc").val(),
+    var form = $(this);
+    var url = form.attr('action');
+    var data = {
+      'user': $('input[name="sale-by"]:checked').val(),
+      'amount': $("#sale-amt").val(),
+      'payment_type': $('input[name="sale-pmt-type"]:checked').val(),
+      'description': $("#sale-desc").val(),
           {% comment %} 'sale-time' : $("#sale-time").val(), {% endcomment %}
-          'csrfmiddlewaretoken' :  $("[name='csrfmiddlewaretoken']").val()
+          'csrfmiddlewaretoken' : $("[name='csrfmiddlewaretoken']").val()
           }
-      console.log(data)
+    console.log(data)
       $.ajax({
-             type: "POST",
-             url: '/add-sale/',
-             data: data, // serializes the form's elements.
-             success: function(response)
-             {
-                 alert(response.msg); // show response from the php script.
-                 if(response.status){
-                   data['pk'] = response.pk;
-                   create_sale(data);
-                 }
-                $( "#submit-sale-btn" ).prop( "disabled", false ).removeClass('animate-pulse cursor-wait');
-             }
-           });
+      type: "POST",
+      url: '/add-sale/',
+      data: data, // serializes the form's elements.
+      success: function (response) {
+        alert(response.msg); // show response from the php script.
+        if (response.status) {
+          data['pk'] = response.pk;
+          create_sale(data);
+        }
+        $("#submit-sale-btn").prop("disabled", false).removeClass('animate-pulse cursor-wait');
+      }
+    });
 
   });
 </script>
@@ -755,9 +535,10 @@
     $(`#today-sale-total-amt`).val(curr_total_amt + add_amt);
 
     var saleDiv = `
-        <div class="divide-y-2 divide-gray-100 relative my-10 p-5 mx-5" id="sale-id-${sale.pk}">
+        <div class="divide-y-2 divide-gray-100 relative my-10 p-5 mx-5" id="sale-id-${sale.pk
+      }">
             <div class="py-8 flex flex-wrap md:flex-nowrap mt-5 shadow-lg p-4" >
-            <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+            <div class="md:w-64  overflow-auto mb-6 flex-shrink-0 flex flex-col">
               <span class="font-semibold text-xl title-font text-gray-700"
                 >Sale by</span
               >
@@ -904,9 +685,8 @@
                 </div>
                 <div class="w-full md:w-1/4">
                 <form action="/delete-sale/" method="POST" class="delete-sale-form" >
-                  <input type='hidden' value="${sale.pk}" id="sale-id-${
-      sale.pk
-    }" name="sale-id"/>
+                  <input type='hidden' value="${sale.pk}" id="sale-id-${sale.pk
+      }" name="sale-id"/>
                   <button
                     id = 'del-sale-btn-${sale.pk}'
                     value = "${sale.pk}"
